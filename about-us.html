@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - The Rojgar Result</title>
+    <meta name="title" content="About Us - The Rojgar Result">
+    <meta name="description"
+        content="Learn more about The Rojgar Result, India's most trusted portal since 2026 for Latest Govt Jobs, Sarkari Result, Admit Card, and Answer Key updates.">
+    <meta name="keywords"
+        content="About Rojgar Result, Sarkari Result Info, Latest Jobs, Admit Card 2026, Sarkari Naukri">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English, Hindi">
+    <link rel="canonical" href="https://therojgarresult.com/about-us.html">
+
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        rrRed: '#a30000',
+                        rrBlue: '#1f4fb2',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+
+<body
+    class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+
+    <header
+        class="bg-rrBlue dark:bg-gray-950 text-white shadow-md border-b-4 border-rrRed sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-3 flex justify-between items-center relative">
+            <a href="/" class="text-2xl md:text-3xl font-extrabold tracking-wide drop-shadow-md">
+                TheRojgarResult
+            </a>
+
+            <div class="flex items-center gap-3">
+                <button onclick="toggleSearch()"
+                    class="p-2 rounded-full bg-blue-700 dark:bg-gray-800 text-white hover:bg-blue-600 dark:hover:bg-gray-700 transition shadow-inner focus:outline-none"
+                    title="Search Jobs">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+
+                <button onclick="toggleDarkMode()"
+                    class="p-2 rounded-full bg-white dark:bg-gray-800 text-rrBlue dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-inner focus:outline-none"
+                    aria-label="Toggle Theme">
+                    <svg id="sun-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                        </path>
+                    </svg>
+                    <svg id="moon-icon" class="block w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                        </path>
+                    </svg>
+                </button>
+
+                <div id="search-container"
+                    class="hidden absolute top-full right-4 mt-3 w-72 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-3 z-50 transition-all">
+                    <div class="relative">
+                        <input type="text" id="search-input" onkeyup="performSearch()"
+                            placeholder="Search Jobs, Result, Admit Card..."
+                            class="w-full p-2 pl-3 pr-8 border border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white text-sm focus:outline-none focus:border-blue-500">
+                    </div>
+                    <ul id="search-results" class="mt-2 max-h-48 overflow-y-auto hidden"></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-yellow-100 dark:bg-gray-800 border-b border-gray-300 dark:border-gray-700 shadow-sm">
+        <div
+            class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-2 flex space-x-6 overflow-x-auto whitespace-nowrap text-sm md:text-base font-bold text-gray-800 dark:text-gray-200">
+            <a href="index.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">HOME</a>
+            <a href="latest-jobs.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">LATEST JOBS</a>
+            <a href="admit-card.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">ADMIT CARD</a>
+            <a href="latest-result.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">RESULT</a>
+            <a href="answer-key.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">ANSWER KEY</a>
+            <a href="syllabus.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">SYLLABUS</a>
+            <a href="admission-form.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">ADMISSION</a>
+        </div>
+    </nav>
+
+    <main class="max-w-[1200px] w-[98%] mx-auto mt-8 px-2 md:px-0 mb-10 flex-grow">
+
+        <div
+            class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-xl rounded-xl overflow-hidden p-6 md:p-10">
+
+            <h1 class="text-3xl md:text-4xl font-bold text-rrBlue dark:text-blue-400 mb-6 border-b-4 border-rrRed pb-3">
+                About Us - The Rojgar Result
+            </h1>
+
+            <div class="space-y-8 text-gray-800 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+
+                <p>
+                    Welcome to <strong>TheRojgarResult.com</strong>. We are a leading and dedicated educational portal
+                    in India, providing the fastest and most accurate updates regarding Sarkari Naukri, Exam Results,
+                    Admit Cards, Syllabus, and Online Admissions since 2026.
+                </p>
+
+                <!-- NEW FOUNDER SECTION ADDED HERE -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">Meet the Founder</h2>
+                    <p class="mb-4">
+                        The Rojgar Result is founded and created by <strong>Sachin Meena</strong>. With a vision to make job hunting and educational updates accessible, fast, and transparent, Sachin started this platform to help millions of students across India.
+                    </p>
+                    <blockquote class="border-l-4 border-rrBlue bg-blue-50 dark:bg-gray-700 p-5 rounded-r-lg italic text-gray-700 dark:text-gray-300 font-medium shadow-sm">
+                        "Your hard work deserves the right direction. My ultimate goal is not just to provide updates, but to build a reliable bridge between your dedication and your dream job. Keep striving, because every great achievement begins with the decision to try." <br>
+                        <span class="block mt-3 font-bold text-rrRed dark:text-red-400 not-italic">— Sachin Meena, Founder & Creator</span>
+                    </blockquote>
+                </div>
+
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">Our Mission</h2>
+                    <p>
+                        Our mission is to help job seekers and students find correct and verified information without
+                        any hassle. We understand the struggles of aspirants preparing for competitive exams, which is
+                        why we monitor official government websites 24x7 to bring you the latest notifications as
+                        quickly as possible.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">What We Provide</h2>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li><strong>Latest Government Jobs:</strong> Updates on SSC, UPSC, Railway, Banking, Police, and
+                            State level recruitment.</li>
+                        <li><strong>Admit Cards & Answer Keys:</strong> Direct download links for hassle-free access.
+                        </li>
+                        <li><strong>Exam Results:</strong> Fastest result updates for board exams, entrance tests, and
+                            competitive exams.</li>
+                        <li><strong>Admission Forms & Syllabus:</strong> Detailed guides and PDF downloads to help you
+                            prepare better.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">Disclaimer</h2>
+                    <p class="text-sm bg-yellow-50 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-yellow-500 shadow-sm">
+                        <strong>Note:</strong> TheRojgarResult.com is an independent informational portal and is NOT
+                        affiliated with any Government Organization. All the information provided on this website is
+                        collected from various official government websites and employment newspapers. We always advise
+                        candidates to verify the details from the official authorities before applying.
+                    </p>
+                </div>
+
+                <!-- UPDATED CONTACT SECTION -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">Contact Us</h2>
+                    <p class="mb-3">
+                        If you have any queries, feedback, or suggestions, please feel free to reach out to me directly at:
+                    </p>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-center gap-2">
+                            <span class="font-bold text-gray-700 dark:text-gray-300">📧 Email:</span> 
+                            <a href="mailto:therojgarresult@gmail.com" class="text-blue-600 dark:text-blue-400 font-bold hover:underline">therojgarresult@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="font-bold text-gray-700 dark:text-gray-300">✈️ Telegram:</span> 
+                            <a href="https://t.me/samflyyy" target="_blank" class="text-blue-600 dark:text-blue-400 font-bold hover:underline">@samflyyy</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer (Matched with Header Theme) -->
+<footer class="bg-rrBlue dark:bg-gray-950 text-white mt-4 border-t-4 border-rrRed">
+        <div class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
+            
+            <!-- Column 1 -->
+            <div>
+                <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">About The Rojgar Result</h3>
+                <p class="text-blue-100 dark:text-gray-400 leading-relaxed">The Rojgar Result is a leading platform providing fast, accurate, and real-time updates for Sarkari Result, Latest Jobs, Admit Cards, and Admission details since 2026.</p>
+            </div>
+            
+            <!-- Column 2 -->
+            <div>
+                <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">Important Links</h3>
+                <ul class="grid grid-cols-2 gap-x-4 gap-y-3 text-blue-100 dark:text-gray-400 text-left md:text-center lg:text-left mx-auto md:mx-0 w-fit md:w-full">
+                    <li><a href="about-us.html" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="contact-us.html" class="hover:text-white transition">Contact Us</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-white transition">Disclaimer</a></li>
+                    <li><a href="sitemap.xml" class="hover:text-white transition">Sitemap Here</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html" class="hover:text-white transition">Terms & Conditions</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Column 3 -->
+            <div>
+                <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">Connect With Us</h3>
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start mt-2">
+                    <a href="https://t.me/samflyyy" class="bg-blue-700 dark:bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-800 dark:hover:bg-blue-700 font-bold transition shadow border border-blue-500 dark:border-transparent">Telegram</a>
+                    <a href="https://chat.whatsapp.com/IO9kQcY25HOKg3jA22THyg?" class="bg-green-600 px-4 py-2 rounded-full hover:bg-green-700 font-bold transition shadow border border-green-500 dark:border-transparent">WhatsApp</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Bottom Copyright Bar (Darker Blue for contrast) -->
+        <div class="bg-blue-900 dark:bg-black py-4 text-center text-xs text-blue-200 dark:text-gray-500 tracking-wide">
+            &copy; 2026 TheRojgarResult.Com. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

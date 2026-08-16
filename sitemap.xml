@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+       <loc>https://therojgarresult.com/</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>hourly</changefreq>
+       <priority>1.0000</priority>
+  </url>
+
+  <!-- Main Job & Result Categories -->
+  <url>
+       <loc>https://therojgarresult.com/latest-jobs.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/latest-result.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/admit-card.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/answer-key.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/syllabus.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/admission-form.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/upcoming-jobs.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/sarkariyojana.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- Informational Pages -->
+  <url>
+       <loc>https://therojgarresult.com/about-us.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.6000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/contact-us.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.6000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/privacy-policy.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.6000</priority>
+  </url>
+  <url>
+       <loc>https://therojgarresult.com/terms-and-conditions.html</loc>
+       <lastmod>2026-08-04T11:19:39+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.6000</priority>
+  </url>
+
+</urlset>

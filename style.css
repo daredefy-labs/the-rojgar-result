@@ -1,0 +1,165 @@
+/* ==============================================================
+   1. CUSTOM SCROLLBAR DESIGN (For PC & Mobile)
+   ============================================================== */
+::-webkit-scrollbar { 
+    height: 6px; 
+    width: 6px; 
+}
+::-webkit-scrollbar-thumb { 
+    background: #888; 
+    border-radius: 4px; 
+}
+::-webkit-scrollbar-track { 
+    background: #e5e7eb; 
+}
+/* Dark Mode Scrollbar */
+.dark ::-webkit-scrollbar-track { 
+    background: #1f2937; 
+}
+
+/* ==============================================================
+   2. HIDE SCROLLBAR (Horizontal scroll categories ke liye)
+   ============================================================== */
+.no-scrollbar::-webkit-scrollbar { 
+    display: none; 
+}
+.no-scrollbar { 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* ==============================================================
+   3. IMPORTANT ALERTS ANIMATION (Marquee Effect)
+   ============================================================== */
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite; /* Speed yahan se kam-zyada kar sakte hain */
+}
+/* Animation Keyframes */
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+/* Hover karne par news ruk jaye (Optional, user padh sake) */
+.marquee:hover span {
+    animation-play-state: paused;
+}
+
+/* ==============================================================
+   4. JOB DETAILS POST PAGE TABLE DESIGN
+   ============================================================== */
+.job-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+}
+.job-table th, .job-table td { 
+    border: 1px solid #d1d5db; 
+    padding: 10px; 
+}
+/* Dark Mode Table Borders */
+.dark .job-table th, .dark .job-table td { 
+    border-color: #4b5563; 
+}
+
+/* ==============================================================
+   5. MOBILE HORIZONTAL CAROUSEL (For Related Posts)
+   ============================================================== */
+.related-scroll { 
+    display: flex; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+}
+.related-scroll > div { 
+    scroll-snap-align: start; 
+    flex: 0 0 85%; 
+}
+@media (min-width: 768px) {
+    .related-scroll { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        overflow-x: visible; 
+    }
+    .related-scroll > div { 
+        flex: none; 
+    }
+}
+
+
+/* ==============================================================
+   CUSTOM CSS FOR XML SITEMAP (The Rojgar Result)
+   ============================================================== */
+
+urlset {
+    display: table;
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    border-collapse: collapse;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* Sitemap का Header */
+urlset::before {
+    content: "XML Sitemap - The Rojgar Result";
+    display: table-caption;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: #1f4fb2; /* तुम्हारी साइट का ब्लू कलर */
+    color: #ffffff;
+    text-align: left;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #1f4fb2;
+}
+
+url {
+    display: table-row;
+}
+
+/* हल्की ग्रे लाइनें (Simple Lines) */
+loc, lastmod, changefreq, priority {
+    display: table-cell;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db; /* यहाँ से सिंपल लाइनें आ रही हैं */
+    font-size: 14px;
+    color: #374151;
+    vertical-align: middle;
+}
+
+/* Hover Effect (जब माउस ऊपर जाए) */
+url:hover {
+    background-color: #f3f4f6;
+}
+
+/* Link का कलर */
+loc {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* ==============================================================
+   Sitemap का Footer (All Rights Reserved)
+   ============================================================== */
+urlset::after {
+    content: "© 2026 TheRojgarResult.Com. All Rights Reserved.";
+    display: table-caption;
+    caption-side: bottom; /* इससे यह लाइन टेबल के सबसे नीचे दिखेगी */
+    font-size: 13px;
+    font-weight: 500;
+    padding: 15px;
+    background-color: #1f4fb2; /* तुम्हारी साइट के फूटर जैसा डार्क कलर */
+    color: #fff; /* हल्का ग्रे टेक्स्ट */
+    text-align: center;
+    border-radius: 0 0 8px 8px; /* नीचे के कोनों को गोल करने के लिए */
+    letter-spacing: 1px;
+}

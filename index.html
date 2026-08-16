@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="hi">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>The Rojgar Result - Sarkari Result 2026, Latest Jobs</title>
+      <meta name="title" content="The Rojgar Result - Sarkari Result 2026, Latest Jobs">
+      <meta name="description" content="RojgarResult.Com is a trusted platform for Latest Govt Jobs, Sarkari Result, Admit Card, Answer Key, Syllabus and Admission forms 2026.">
+      <meta name="keywords" content="Sarkari Result, Rojgar Result, Latest Jobs, Admit Card 2026, Sarkari Naukri, UP Police, SSC CGL">
+      <meta name="robots" content="index, follow">
+      <meta name="language" content="English, Hindi">
+      <link rel="icon" type="image/png" href="images/favicon.png">
+      <link rel="preconnect" href="https://cdn.tailwindcss.com">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+         tailwind.config = {
+             darkMode: 'class',
+             theme: {
+                 extend: {
+                     colors: {
+                         rrRed: '#a30000',
+                         rrBlue: '#1f4fb2',
+                     }
+                 }
+             }
+         }
+      </script>
+      <link rel="stylesheet" href="style.css">
+      <script>
+         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+             document.documentElement.classList.add('dark');
+         } else {
+             document.documentElement.classList.remove('dark');
+         }
+      </script>
+      <meta name="google-adsense-account" content="ca-pub-8270471329620387">
+   </head>
+   <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <header class="bg-rrBlue dark:bg-gray-950 text-white shadow-md border-b-4 border-rrRed sticky top-0 z-50 transition-colors duration-300">
+         <div class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-3 flex justify-between items-center relative">
+            <a href="/" class="text-2xl md:text-3xl font-extrabold tracking-wide drop-shadow-md">
+            TheRojgarResult
+            </a>
+            <div class="flex items-center gap-3">
+               <button onclick="toggleSearch()" class="p-2 rounded-full bg-blue-700 dark:bg-gray-800 text-white hover:bg-blue-600 dark:hover:bg-gray-700 transition shadow-inner focus:outline-none" title="Search Jobs">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+               </button>
+               <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-white dark:bg-gray-800 text-rrBlue dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-inner focus:outline-none" aria-label="Toggle Theme">
+                  <svg id="sun-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                     </path>
+                  </svg>
+                  <svg id="moon-icon" class="block w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                     </path>
+                  </svg>
+               </button>
+               <div id="search-container" class="hidden absolute top-full right-4 mt-3 w-72 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-3 z-50 transition-all">
+                  <div class="relative">
+                     <input type="text" id="search-input" onkeyup="performSearch()" placeholder="Search Jobs, Result, Admit Card..." class="w-full p-2 pl-3 pr-8 border border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white text-sm focus:outline-none focus:border-blue-500">
+                  </div>
+                  <ul id="search-results" class="mt-2 max-h-48 overflow-y-auto hidden"></ul>
+               </div>
+            </div>
+         </div>
+      </header>
+      <nav class="bg-yellow-100 dark:bg-gray-800 border-b border-gray-300 dark:border-gray-700 shadow-sm">
+         <div class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-2 flex space-x-6 overflow-x-auto whitespace-nowrap text-sm md:text-base font-bold text-gray-800 dark:text-gray-200">
+            <a href="index.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">HOME</a>
+            <a href="latest-jobs.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">LATEST JOBS</a>
+            <a href="admit-card.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">ADMIT CARD</a>
+            <a href="latest-result.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">RESULT</a>
+            <a href="answer-key.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">ANSWER KEY</a>
+            <a href="syllabus.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">SYLLABUS</a>
+            <a href="admission-form.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">ADMISSION</a>
+         </div>
+      </nav>
+      <div class="max-w-[1400px] w-[98%] mx-auto mt-4 px-2 md:px-0">
+         <div class="flex items-center bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md overflow-hidden shadow-sm">
+            <div class="bg-rrRed text-white px-3 py-2 font-bold whitespace-nowrap text-xs md:text-sm z-10 shadow-md uppercase">
+               IMPORTANT ALERTS
+            </div>
+            <div class="marquee w-full bg-gray-50 dark:bg-gray-800 text-rrBlue dark:text-blue-400 font-semibold text-sm py-2">
+               <span>
+               👉 <a href="coming-soon.html" class="hover:underline">SSC CGL 2026 Notification Released - Apply
+               Now</a> &nbsp; |
+               &nbsp;
+               👉 <a href="coming-soon.html" class="hover:underline">Railway RRB NTPC Graduate Level CBT II Admit
+               Card</a> &nbsp;
+               | &nbsp;
+               👉 <a href="coming-soon.html" class="hover:underline">UPTET Official Answer Key 2026 - OUT</a>
+               </span>
+            </div>
+         </div>
+      </div>
+      <div class="max-w-[1400px] w-[98%] mx-auto mt-4 px-2 md:px-0 flex gap-4 justify-center">
+         <a href="https://t.me/samflyyy" class="bg-[#0088cc] hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition w-full md:w-auto text-center text-sm flex items-center justify-center gap-2">
+         📢 Join Telegram Channel
+         </a>
+         <a href="https://chat.whatsapp.com/IHSTXFx1XptBJ3b5zPiqDq?" class="bg-[#25D366] hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition w-full md:w-auto text-center text-sm flex items-center justify-center gap-2">
+         💬 Join WhatsApp Channel
+         </a>
+      </div>
+      <div class="max-w-[1400px] w-[98%] mx-auto mt-6 px-2 md:px-0 grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
+         <a href="coming-soon.html" class="bg-[#9e1b32] dark:bg-red-900 hover:bg-red-700 text-white text-center p-3 rounded-xl shadow-md border-2 border-transparent hover:border-white transition-all duration-300 flex items-center justify-center text-xs md:text-sm font-bold underline">UP
+         Anganvadi Bharti Online Form 2026</a>
+         <a href="coming-soon.html" class="bg-[#9e1b32] dark:bg-red-900 hover:bg-red-700 text-white text-center p-3 rounded-xl shadow-md border-2 border-transparent hover:border-white transition-all duration-300 flex items-center justify-center text-xs md:text-sm font-bold underline">UPTET
+         Official Answer Key 2026 - OUT</a>
+         <a href="coming-soon.html" class="bg-[#9e1b32] dark:bg-red-900 hover:bg-red-700 text-white text-center p-3 rounded-xl shadow-md border-2 border-transparent hover:border-white transition-all duration-300 flex items-center justify-center text-xs md:text-sm font-bold underline">UPSSSC
+         Forest Guard Online Form 2026</a>
+         <a href="coming-soon.html" class="bg-[#9e1b32] dark:bg-red-900 hover:bg-red-700 text-white text-center p-3 rounded-xl shadow-md border-2 border-transparent hover:border-white transition-all duration-300 flex items-center justify-center text-xs md:text-sm font-bold underline">UPSSSC
+         All Form Recruitment 2026</a>
+         <a href="coming-soon.html" class="bg-[#9e1b32] dark:bg-red-900 hover:bg-red-700 text-white text-center p-3 rounded-xl shadow-md border-2 border-transparent hover:border-white transition-all duration-300 flex items-center justify-center text-xs md:text-sm font-bold underline">UPSSSC
+         Cane Supervisor Online Form</a>
+         <a href="coming-soon.html" class="bg-[#9e1b32] dark:bg-red-900 hover:bg-red-700 text-white text-center p-3 rounded-xl shadow-md border-2 border-transparent hover:border-white transition-all duration-300 flex items-center justify-center text-xs md:text-sm font-bold underline">UP
+         Rojgar Mela Jobs in June 2026</a>
+         <a href="coming-soon.html" class="bg-[#9e1b32] dark:bg-red-900 hover:bg-red-700 text-white text-center p-3 rounded-xl shadow-md border-2 border-transparent hover:border-white transition-all duration-300 flex items-center justify-center text-xs md:text-sm font-bold underline">UPPSC
+         PCS Pre Online Form 2026</a>
+         <a href="coming-soon.html" class="bg-[#9e1b32] dark:bg-red-900 hover:bg-red-700 text-white text-center p-3 rounded-xl shadow-md border-2 border-transparent hover:border-white transition-all duration-300 flex items-center justify-center text-xs md:text-sm font-bold underline">UPSSSC
+         Havaldar Online Form 2026</a>
+      </div>
+      <main class="max-w-[1400px] w-[98%] mx-auto mt-8 px-2 md:px-0 grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden flex flex-col transition-all hover:shadow-xl">
+            <div class="bg-purple-600 text-white flex justify-between items-center px-3 py-2 border-b-2 border-purple-800">
+               <h2 class="font-bold text-base md:text-lg">Result</h2>
+               <a href="latest-result.html" class="bg-red-500 text-white text-xs px-2 py-1 rounded hover:bg-red-600 font-bold shadow">View
+               All</a>
+            </div>
+            <ul class="flex-grow p-2 space-y-1">
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">RBI
+                  Officer Grade B General Result</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Join
+                  Indian Army Agniveer Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Police Constable Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">MPPSC
+                  Mining Inspector Final Result</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">RBI
+                  Officer Grade B General Result</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Join
+                  Indian Army Agniveer Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Police Constable Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">MPPSC
+                  Mining Inspector Final Result</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">RBI
+                  Officer Grade B General Result</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Join
+                  Indian Army Agniveer Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Police Constable Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">RBI
+                  Officer Grade B General Result</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Join
+                  Indian Army Agniveer Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Police Constable Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">MPPSC
+                  Mining Inspector Final Result</a>
+               </li>
+            </ul>
+         </div>
+         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden flex flex-col transition-all hover:shadow-xl">
+            <div class="bg-teal-500 text-white flex justify-between items-center px-3 py-2 border-b-2 border-teal-700">
+               <h2 class="font-bold text-base md:text-lg">Admit Card</h2>
+               <a href="admit-card.html" class="bg-red-500 text-white text-xs px-2 py-1 rounded hover:bg-red-600 font-bold shadow">View
+               All</a>
+            </div>
+            <ul class="flex-grow p-2 space-y-1">
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UKSSSC
+                  Group C Driver Admit Card</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">BEML
+                  Non Executive Operator Card</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">NTA
+                  CSIR UGC NET Admit Card 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSC
+                  CAPF Assistant Commandant</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">RBI
+                  Officer Grade B General Result</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Join
+                  Indian Army Agniveer Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Police Constable Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UKSSSC
+                  Group C Driver Admit Card</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">BEML
+                  Non Executive Operator Card</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">NTA
+                  CSIR UGC NET Admit Card 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSC
+                  CAPF Assistant Commandant</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UKSSSC
+                  Group C Driver Admit Card</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">BEML
+                  Non Executive Operator Card</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">NTA
+                  CSIR UGC NET Admit Card 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSC
+                  CAPF Assistant Commandant</a>
+               </li>
+            </ul>
+         </div>
+         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden flex flex-col transition-all hover:shadow-xl">
+            <div class="bg-pink-500 text-white flex justify-between items-center px-3 py-2 border-b-2 border-pink-700">
+               <h2 class="font-bold text-base md:text-lg">Answer Key</h2>
+               <a href="answer-key.html" class="bg-red-500 text-white text-xs px-2 py-1 rounded hover:bg-red-600 font-bold shadow">View
+               All</a>
+            </div>
+            <ul class="flex-grow p-2 space-y-1">
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">SSB
+                  Head Constable Answer Key</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">NTA
+                  NEET UG 2026 OMR Sheet</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSSSC
+                  Teacher Cadre Answer Key</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">MPESB
+                  ADDET Animal Husbandry Key</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">RBI
+                  Officer Grade B General Result</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Join
+                  Indian Army Agniveer Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Police Constable Result 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">SSB
+                  Head Constable Answer Key</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">NTA
+                  NEET UG 2026 OMR Sheet</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSSSC
+                  Teacher Cadre Answer Key</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">MPESB
+                  ADDET Animal Husbandry Key</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">SSB
+                  Head Constable Answer Key</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">NTA
+                  NEET UG 2026 OMR Sheet</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSSSC
+                  Teacher Cadre Answer Key</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">MPESB
+                  ADDET Animal Husbandry Key</a>
+               </li>
+            </ul>
+         </div>
+         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden flex flex-col transition-all hover:shadow-xl">
+            <div class="bg-yellow-500 text-white flex justify-between items-center px-3 py-2 border-b-2 border-yellow-700">
+               <h2 class="font-bold text-base md:text-lg">Latest Jobs</h2>
+               <a href="latest-jobs.html" class="bg-red-500 text-white text-xs px-2 py-1 rounded hover:bg-red-600 font-bold shadow">View
+               All</a>
+            </div>
+            <ul class="flex-grow p-2 space-y-1">
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Dairy Development DEO Online Form</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  16/07/2026</span>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSSSC
+                  Auditor & Assistant Accountant</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  03/08/2026</span>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">NCL
+                  Mining Sirdar Surveyor Form</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  05/08/2026</span>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Indian
+                  Army SSC Technical 68th Form</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  07/08/2026</span>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Dairy Development DEO Online Form</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  16/07/2026</span>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSSSC
+                  Auditor & Assistant Accountant</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  03/08/2026</span>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">NCL
+                  Mining Sirdar Surveyor Form</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  05/08/2026</span>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Indian
+                  Army SSC Technical 68th Form</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  07/08/2026</span>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Dairy Development DEO Online Form</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  16/07/2026</span>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2">
+                  <a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSSSC
+                  Auditor & Assistant Accountant</a>
+                  <span class="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">Last Date:
+                  03/08/2026</span>
+               </li>
+            </ul>
+         </div>
+         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden flex flex-col transition-all hover:shadow-xl">
+            <div class="bg-indigo-500 text-white flex justify-between items-center px-3 py-2 border-b-2 border-indigo-700">
+               <h2 class="font-bold text-base md:text-lg">Admission</h2>
+               <a href="admission-form.html" class="bg-red-500 text-white text-xs px-2 py-1 rounded hover:bg-red-600 font-bold shadow">View
+               All</a>
+            </div>
+            <ul class="flex-grow p-2 space-y-1">
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  SCVTUP ITI Admission Form</a>
+               </li>
+                              <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Allahabad
+                  University UG Admission</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">NTA
+                  AIAPGET Online Form 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPRTOU
+                  B.Ed Entrance Form</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Allahabad
+                  University UG Admission</a>
+               </li>
+
+            </ul>
+         </div>
+         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden flex flex-col transition-all hover:shadow-xl">
+            <div class="bg-rose-500 text-white flex justify-between items-center px-3 py-2 border-b-2 border-rose-700">
+               <h2 class="font-bold text-base md:text-lg">Syllabus</h2>
+               <a href="syllabus.html" class="bg-red-500 text-white text-xs px-2 py-1 rounded hover:bg-red-600 font-bold shadow">View
+               All</a>
+            </div>
+            <ul class="flex-grow p-2 space-y-1">
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="ssc-cgl-syllabus-2026.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">SSC CGL Syllabus 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="rrb-syllabus-2026.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">RRB Technician Syllabus 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">BSNL
+                  JTO Syllabus PDF</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">Rajasthan
+                  CET Graduate Syllabus</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">SWD
+                  IAS/PCS Coaching Syllabus</a>
+               </li>
+
+
+            </ul>
+         </div>
+         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden flex flex-col transition-all hover:shadow-xl">
+            <div class="bg-teal-600 text-white flex justify-between items-center px-3 py-2 border-b-2 border-teal-800">
+               <h2 class="font-bold text-base md:text-lg">Sarkari Yojana</h2>
+               <a href="sarkari-yojana.html" class="bg-red-500 text-white text-xs px-2 py-1 rounded hover:bg-red-600 font-bold shadow">View
+               All</a>
+            </div>
+            <ul class="flex-grow p-2 space-y-1">
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Rojgar Mela Registration</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Private Jobs 2026 Online</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Janganana Registration Form</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">ONGC
+                  Scholarship Form 2026</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Rojgar Mela Registration</a>
+               </li>
+
+            </ul>
+         </div>
+         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden flex flex-col transition-all hover:shadow-xl">
+            <div class="bg-orange-500 text-white flex justify-between items-center px-3 py-2 border-b-2 border-orange-700">
+               <h2 class="font-bold text-base md:text-lg">Upcoming Jobs</h2>
+               <a href="upcoming-jobs.html" class="bg-red-500 text-white text-xs px-2 py-1 rounded hover:bg-red-600 font-bold shadow">View
+               All</a>
+            </div>
+            <ul class="flex-grow p-2 space-y-1">
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">SSC
+                  GD Constable Vacancy</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UP
+                  Police Constable Form Soon</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSSSC
+                  Pharmacist Notification</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">UPSSSC
+                  Lekhpal Recruitment</a>
+               </li>
+               <li class="border-b border-gray-200 dark:border-gray-700 py-2"><a href="coming-soon.html" class="text-blue-700 dark:text-blue-400 hover:text-red-600 dark:hover:text-red-400 text-xs md:text-sm font-semibold block leading-snug">SSC
+                  GD Constable Vacancy</a>
+               </li>
+            </ul>
+         </div>
+      </main>
+      <section class="max-w-[1400px] w-[98%] mx-auto mt-10 px-2 md:px-0 mb-8">
+         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-xl rounded-xl overflow-hidden">
+            <div class="bg-rrBlue dark:bg-blue-900 text-white text-center py-3 text-lg md:text-2xl font-bold tracking-wide">
+               The Rojgar Result | Trusted Portal Since 2026
+            </div>
+            <div class="p-4 md:p-6 text-sm md:text-base text-gray-800 dark:text-gray-300 space-y-5">
+               <p>
+                  <strong>The Rojgar Result is the official website in India</strong> leading and trusted platform for
+                  <a href="latest-jobs.html" class="text-blue-600 dark:text-blue-400 font-bold hover:underline">Latest
+                  Govt Jobs</a>, Online Form 2026, Admit Card, Exam Results, and <strong>सरकारी नौकरी updates</strong> in India. Since <strong>2026</strong>, we have been consistently providing fast, accurate, and reliable information
+                  to millions of aspirants preparing for government exams.
+               </p>
+               <p>
+                  Since <strong>2026</strong>, The Rojgar Result has been helping millions of aspirants by providing
+                  <strong>fast, accurate, and real-time job notifications</strong> for all major government sectors including <strong>Railway, SSC, UPSC, Banking, Defence, Police, Teaching, and State Level
+                  Jobs.</strong>
+               </p>
+            </div>
+            <div class="bg-rrBlue dark:bg-blue-900 text-white text-center py-2 text-lg md:text-xl font-bold tracking-wide">
+               Why Choose The Rojgar Result?
+            </div>
+            <div class="p-4 md:p-6 text-sm md:text-base text-gray-800 dark:text-gray-300 space-y-2">
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span> Trusted Since 2026
+               </p>
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span> Fastest Updates (24×7 Active)</p>
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span> Direct Official Links</p>
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span> Free Job Alerts (WhatsApp & Telegram)</p>
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span> All India Govt Jobs Covered</p>
+            </div>
+            <div class="bg-rrBlue dark:bg-blue-900 text-white text-center py-2 text-lg md:text-xl font-bold tracking-wide">
+               The Rojgar Result : What You Can Find Here?
+            </div>
+            <div class="p-4 md:p-6 text-sm md:text-base text-gray-800 dark:text-gray-300 space-y-2">
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span> Latest Government Job Notifications</p>
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span> Sarkari Result 2026 Updates</p>
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span>Download <a href="admit-card.html" class="text-blue-600 dark:text-blue-400 font-bold hover:underline mx-1">Admit Card</a> Links</p>
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span>Answer Keys and Exam Syllabus</p>
+               <p class="flex items-start"><span class="text-blue-600 dark:text-blue-400 mr-2">✔️</span>Entrance Exams and <a href="admission-form.html" class="text-blue-600 dark:text-blue-400 font-bold hover:underline mx-1">Admission Forms</a></p>
+            </div>
+            <div class="bg-rrBlue dark:bg-blue-900 text-white text-center py-3 text-lg md:text-2xl font-bold tracking-wide">
+               Latest Govt Jobs, Results & Online Form 2026 – The Rojgar Result
+            </div>
+            <div class="p-4 md:p-6 text-sm md:text-base text-gray-800 dark:text-gray-300 space-y-5">
+               <p>Get the <strong>latest govt jobs 2026, online form updates, admit cards</strong>, <a href="syllabus.html" class="text-blue-600 dark:text-blue-400 font-bold hover:underline">Exam
+                  Syllabus</a> <strong>and exam results</strong> in one place. Stay updated with <strong>fast
+                  notifications, direct apply links, and verified information</strong> so you never miss any important opportunity.
+               </p>
+            </div>
+            <div class="bg-rrBlue dark:bg-blue-900 text-white text-center py-3 text-lg md:text-2xl font-bold tracking-wide">
+               The Rojgar Result – Latest Sarkari Result 2026
+            </div>
+            <div class="p-4 md:p-6 text-sm md:text-base text-gray-800 dark:text-gray-300 space-y-5">
+               <p>Stay updated with the latest <a href="#" class="text-blue-600 dark:text-blue-400 font-bold hover:underline">Sarkari Result</a>,
+                  <strong>Government Jobs, Admit Cards, and </strong><a href="answer-key.html" class="text-blue-600 dark:text-blue-400 font-bold hover:underline">Answer Key</a> on Rojgar Result. We continuously update our platform with fresh notifications
+                  so that candidates never miss any important opportunity. Our team monitors official websites and publishes updates quickly to ensure you get the fastest information available online.
+               </p>
+            </div>
+         </div>
+      </section>
+      <!-- Footer (Matched with Header Theme) -->
+<footer class="bg-rrBlue dark:bg-gray-950 text-white mt-4 border-t-4 border-rrRed">
+        <div class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
+            
+            <!-- Column 1 -->
+            <div>
+                <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">About The Rojgar Result</h3>
+                <p class="text-blue-100 dark:text-gray-400 leading-relaxed">The Rojgar Result is a leading platform providing fast, accurate, and real-time updates for Sarkari Result, Latest Jobs, Admit Cards, and Admission details since 2026.</p>
+            </div>
+            
+            <!-- Column 2 -->
+            <div>
+                <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">Important Links</h3>
+                <ul class="grid grid-cols-2 gap-x-4 gap-y-3 text-blue-100 dark:text-gray-400 text-left md:text-center lg:text-left mx-auto md:mx-0 w-fit md:w-full">
+                    <li><a href="about-us.html" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="contact-us.html" class="hover:text-white transition">Contact Us</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-white transition">Disclaimer</a></li>
+                    <li><a href="sitemap.xml" class="hover:text-white transition">Sitemap Here</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html" class="hover:text-white transition">Terms & Conditions</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Column 3 -->
+            <div>
+                <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">Connect With Us</h3>
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start mt-2">
+                    <a href="https://t.me/samflyyy" class="bg-blue-700 dark:bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-800 dark:hover:bg-blue-700 font-bold transition shadow border border-blue-500 dark:border-transparent">Telegram</a>
+                    <a href="https://chat.whatsapp.com/IO9kQcY25HOKg3jA22THyg?" class="bg-green-600 px-4 py-2 rounded-full hover:bg-green-700 font-bold transition shadow border border-green-500 dark:border-transparent">WhatsApp</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Bottom Copyright Bar (Darker Blue for contrast) -->
+        <div class="bg-blue-900 dark:bg-black py-4 text-center text-xs text-blue-200 dark:text-gray-500 tracking-wide">
+            &copy; 2026 TheRojgarResult.Com. All Rights Reserved.
+        </div>
+    </footer>
+      <script src="main.js"></script>
+   </body>
+</html>
