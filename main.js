@@ -40,12 +40,24 @@ function toggleDarkMode() {
 // 3. LIVE SEARCH LOGIC
 // ==============================================================
 const searchDatabase = [
-    { title: "SSC CGL 2026 Online Form", link: "coming-soon.html" },
-    { title: "UPSSSC Auditor & Assistant Accountant", link: "#" },
-    { title: "NTA NEET UG 2026 Admit Card", link: "#" },
-    { title: "UP Police Constable Result 2026", link: "#" },
-    { title: "Railway RRB NTPC Admit Card", link: "#" },
-    { title: "UPSC Civil Services Final Result", link: "#" }
+    { title: "Home", link: "index.html" },
+    { title: "Latest Jobs", link: "latest-jobs.html" },
+    { title: "Latest Result", link: "latest-result.html" },
+    { title: "Admit Card", link: "admit-card.html" },
+    { title: "Answer Key", link: "answer-key.html" },
+    { title: "Syllabus", link: "syllabus.html" },
+    { title: "Admission Form", link: "admission-form.html" },
+    { title: "Upcoming Jobs", link: "upcoming-jobs.html" },
+    { title: "Sarkari Yojana", link: "sarkari-yojana.html" },
+    { title: "About Us", link: "about-us.html" },
+    { title: "Contact Us", link: "contact-us.html" },
+    { title: "Privacy Policy", link: "privacy-policy.html" },
+    { title: "Terms And Conditions", link: "terms-and-conditions.html" },
+    { title: "Disclaimer", link: "disclaimer.html" },
+    { title: "404 Page", link: "404.html" },
+    { title: "Coming Soon", link: "coming-soon.html" },
+    { title: "RRB Railway Technician Syllabus 2026", link: "rrb-railway-technician-syllabus-2026.html" },
+    { title: "SSC CGL Syllabus 2026", link: "ssc-cgl-syllabus-2026.html" }
 ];
 
 function toggleSearch() {

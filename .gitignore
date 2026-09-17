@@ -1,0 +1,37 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Logs and temp files
+*.log
+*.pid
+*.seed
+*.tmp
+*.temp
+
+# Node / package manager caches
+node_modules/
+.npm/
+.pnpm-store/
+
+# Build / generated output
+dist/
+build/
+out/
+coverage/
+
+# Local environment files
+.env
+.env.*
+
+# Optional: local backups or generated static files
+*.bak
+*.orig

@@ -1,37 +1,52 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 1. Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 2. Page Title & Primary SEO -->
+  <title>Contact Us - The Rojgar Result</title>
+  <meta name="title" content="Contact Us - The Rojgar Result">
+  <meta name="description"
+                content="Contact The Rojgar Result for any queries, suggestions, or advertising related to Sarkari Jobs and Results.">
+
+  <!-- 3. Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Contact Us - The Rojgar Result">
+  <meta property="og:description" content="Contact The Rojgar Result for any queries, suggestions, or advertising related to Sarkari Jobs and Results.">
+  <meta property="og:url" content="https://therojgarresult.com/contact-us.html">
+  <meta property="og:image" content="https://therojgarresult.com/images/favicon.png">
+
+  <!-- 4. Structured Data / Schema (JSON-LD) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Contact Us - The Rojgar Result","description":"Contact The Rojgar Result for any queries, suggestions, or advertising related to Sarkari Jobs and Results.","publisher":{"@type":"Organization","name":"The Rojgar Result"}}</script>
+
+  <!-- 5. Favicons & External Assets -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-    <!-- Primary Meta Tags -->
-    <title>Contact Us - The Rojgar Result</title>
-    <meta name="title" content="Contact Us - The Rojgar Result">
-    <meta name="description"
-        content="Contact The Rojgar Result for any queries, suggestions, or advertising related to Sarkari Jobs and Results.">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind CSS -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 6. Custom Stylesheets & Inline Scripts -->
+  <script>
+                tailwind.config = {
+                    darkMode: 'class',
+                    theme: { extend: { colors: { rrRed: '#a30000', rrBlue: '#1f4fb2', } } }
+                }
+            </script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        </script>
 
-    <!-- Tailwind Config for Dark Mode & Custom Colors -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: { extend: { colors: { rrRed: '#a30000', rrBlue: '#1f4fb2', } } }
-        }
-    </script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css"><script>
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    }
-</script>
 </head>
+
+
+
+
 
 <body
     class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
@@ -107,7 +122,7 @@
                             <path
                                 d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.686c.223-.195-.054-.31-.353-.111l-6.4 4.024-2.76-.89c-.6-.188-.61-.6.125-.89l10.836-4.18c.5-.188.95.11.832.89z" />
                         </svg>
-                        <strong>Social:</strong> &nbsp; <a href="https://t.me/samflyyy" target="_blank"
+                        <strong>Social:</strong> &nbsp; <a href="https://t.me/mr_parthh" target="_blank"
                             class="text-blue-600 dark:text-blue-400 hover:underline">Join our Telegram Group</a>
                     </p>
                 </div>
@@ -148,7 +163,7 @@
     </main>
 
     <!-- Footer Section -->
-    <!-- Footer (Matched with Header Theme) -->
+     
 <footer class="bg-rrBlue dark:bg-gray-950 text-white mt-4 border-t-4 border-rrRed">
         <div class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
             
@@ -176,7 +191,7 @@
             <div>
                 <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">Connect With Us</h3>
                 <div class="flex flex-wrap gap-3 justify-center md:justify-start mt-2">
-                    <a href="https://t.me/samflyyy" class="bg-blue-700 dark:bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-800 dark:hover:bg-blue-700 font-bold transition shadow border border-blue-500 dark:border-transparent">Telegram</a>
+                    <a href="https://t.me/mr_parthh" class="bg-blue-700 dark:bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-800 dark:hover:bg-blue-700 font-bold transition shadow border border-blue-500 dark:border-transparent">Telegram</a>
                     <a href="https://chat.whatsapp.com/IO9kQcY25HOKg3jA22THyg?" class="bg-green-600 px-4 py-2 rounded-full hover:bg-green-700 font-bold transition shadow border border-green-500 dark:border-transparent">WhatsApp</a>
                 </div>
             </div>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 1. Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 2. Page Title & Primary SEO -->
+  <title>Coming Soon - The Rojgar Result</title>
+  <meta name="title" content="Coming Soon - The Rojgar Result">
+  <meta name="description" content="The Rojgar Result page is currently under construction. Please check back soon for latest Sarkari result, job, admit card, and syllabus updates.">
+  <meta name="keywords" content="Coming Soon, The Rojgar Result, Sarkari Result, Latest Jobs">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English, Hindi">
+
+  <!-- 3. Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Coming Soon - The Rojgar Result">
+  <meta property="og:description" content="The Rojgar Result page is currently under construction. Please check back soon for latest Sarkari result, job, admit card, and syllabus updates.">
+  <meta property="og:url" content="https://therojgarresult.com/coming-soon.html">
+  <meta property="og:image" content="https://therojgarresult.com/images/favicon.png">
+
+  <!-- 4. Structured Data / Schema (JSON-LD) -->
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"Coming Soon - The Rojgar Result","description":"The Rojgar Result page is currently under construction. Please check back soon for latest Sarkari result, job, admit card, and syllabus updates.","publisher":{"@type":"Organization","name":"The Rojgar Result"}}
+  </script>
+
+  <!-- 5. Favicons & External Assets -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 6. Custom Stylesheets & Inline Scripts -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            rrRed: '#a30000',
+            rrBlue: '#1f4fb2'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+
+    <header class="bg-rrBlue dark:bg-gray-950 text-white shadow-md border-b-4 border-rrRed sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-3 flex justify-between items-center relative">
+            <a href="/" class="text-2xl md:text-3xl font-extrabold tracking-wide drop-shadow-md">
+                TheRojgarResult
+            </a>
+
+            <div class="flex items-center gap-3">
+                <button onclick="toggleSearch()"
+                    class="p-2 rounded-full bg-blue-700 dark:bg-gray-800 text-white hover:bg-blue-600 dark:hover:bg-gray-700 transition shadow-inner focus:outline-none"
+                    title="Search Jobs">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+
+                <button onclick="toggleDarkMode()"
+                    class="p-2 rounded-full bg-white dark:bg-gray-800 text-rrBlue dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-inner focus:outline-none"
+                    aria-label="Toggle Theme">
+                    <svg id="sun-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                        </path>
+                    </svg>
+                    <svg id="moon-icon" class="block w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                        </path>
+                    </svg>
+                </button>
+
+                <div id="search-container"
+                    class="hidden absolute top-full right-4 mt-3 w-72 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-3 z-50 transition-all">
+                    <div class="relative">
+                        <input type="text" id="search-input" onkeyup="performSearch()"
+                            placeholder="Search Jobs, Result, Admit Card..."
+                            class="w-full p-2 pl-3 pr-8 border border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white text-sm focus:outline-none focus:border-blue-500">
+                    </div>
+                    <ul id="search-results" class="mt-2 max-h-48 overflow-y-auto hidden"></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1200px] w-[98%] mx-auto mt-10 mb-16 flex-grow flex items-center justify-center">
+        <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-2xl rounded-xl p-10 md:p-16 text-center w-full max-w-2xl">
+
+            <div class="mb-6">
+                <span class="inline-block bg-rrBlue text-white font-bold px-5 py-2 rounded-full shadow-lg text-xs uppercase tracking-wide">
+                    The Rojgar Result
+                </span>
+            </div>
+
+            <h1 class="text-7xl md:text-9xl font-extrabold text-gray-300 dark:text-gray-700 mb-4">Coming Soon</h1>
+            <h2 class="text-2xl md:text-4xl font-bold text-rrRed dark:text-red-400 mb-4">Page Under Construction!</h2>
+
+            <p class="text-gray-600 dark:text-gray-400 mb-8 text-sm md:text-base">
+                Our team is preparing this section for the latest Sarkari job alerts, admit card, result, syllabus,
+                and admission updates. Please visit again soon.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html"
+                    class="bg-rrBlue hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition">
+                    🏠 Go to Home Page
+                </a>
+                <a href="latest-jobs.html"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition">
+                    🔥 View Latest Jobs
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-rrBlue dark:bg-gray-950 text-white mt-4 border-t-4 border-rrRed">
+        <div class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
+
+            <div>
+                <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">About The Rojgar Result</h3>
+                <p class="text-blue-100 dark:text-gray-400 leading-relaxed">The Rojgar Result is a leading platform providing fast, accurate, and real-time updates for Sarkari Result, Latest Jobs, Admit Cards, and Admission details since 2026.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">Important Links</h3>
+                <ul class="grid grid-cols-2 gap-x-4 gap-y-3 text-blue-100 dark:text-gray-400 text-left md:text-center lg:text-left mx-auto md:mx-0 w-fit md:w-full">
+                    <li><a href="about-us.html" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="contact-us.html" class="hover:text-white transition">Contact Us</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-white transition">Disclaimer</a></li>
+                    <li><a href="sitemap.xml" class="hover:text-white transition">Sitemap Here</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html" class="hover:text-white transition">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold border-b-2 border-blue-400 dark:border-gray-700 pb-2 mb-4">Connect With Us</h3>
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start mt-2">
+                    <a href="https://t.me/mr_parthh" class="bg-blue-700 dark:bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-800 dark:hover:bg-blue-700 font-bold transition shadow border border-blue-500 dark:border-transparent">Telegram</a>
+                    <a href="https://chat.whatsapp.com/IO9kQcY25HOKg3jA22THyg?" class="bg-green-600 px-4 py-2 rounded-full hover:bg-green-700 font-bold transition shadow border border-green-500 dark:border-transparent">WhatsApp</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bg-blue-900 dark:bg-black py-4 text-center text-xs text-blue-200 dark:text-gray-500 tracking-wide">
+            &copy; 2026 TheRojgarResult.Com. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
