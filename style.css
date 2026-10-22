@@ -12,55 +12,6 @@
 ::-webkit-scrollbar-track { 
     background: #e5e7eb; 
 }
-/* Dark Mode Scrollbar */
-.dark ::-webkit-scrollbar-track { 
-    background: #1f2937; 
-}
-
-/* ==============================================================
-   2. HIDE SCROLLBAR (Horizontal scroll categories ke liye)
-   ============================================================== */
-.no-scrollbar::-webkit-scrollbar { 
-    display: none; 
-}
-.no-scrollbar { 
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-/* ==============================================================
-   3. IMPORTANT ALERTS ANIMATION (Marquee Effect)
-   ============================================================== */
-.marquee {
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-.marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 20s linear infinite; /* Speed yahan se kam-zyada kar sakte hain */
-}
-/* Animation Keyframes */
-@keyframes marquee {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
-}
-/* Hover karne par news ruk jaye (Optional, user padh sake) */
-.marquee:hover span {
-    animation-play-state: paused;
-}
-
-/* ==============================================================
-   4. JOB DETAILS POST PAGE TABLE DESIGN
-   ============================================================== */
-.job-table { 
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-bottom: 20px; 
-}
-.job-table th, .job-table td { 
-    border: 1px solid #d1d5db; 
     padding: 10px; 
 }
 /* Dark Mode Table Borders */
@@ -81,6 +32,57 @@
     scroll-snap-align: start; 
     flex: 0 0 85%; 
 }
+
+/* Text-first related cards used by demo pages */
+.demo-related-grid > a {
+    scroll-snap-align: start;
+    flex: 0 0 85%;
+    background: linear-gradient(135deg, #ffffff, #eff6ff);
+    border: 1px solid rgba(37, 99, 235, 0.24);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.08);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+.demo-related-grid > a:hover {
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.16), 0 12px 28px rgba(30, 64, 175, 0.12);
+}
+.demo-related-grid > a > div:first-child {
+    display: none;
+}
+.demo-related-grid > a > div:last-child {
+    padding: 0;
+}
+.demo-related-grid > a h3 {
+    min-height: 3rem;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+.demo-related-grid > a span {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+.demo-related-grid > a::after {
+    content: "View Details";
+    display: inline-flex;
+    margin-top: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+.dark .demo-related-grid > a {
+    background: linear-gradient(135deg, #111827, #1f2937);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+.dark .demo-related-grid > a span {
+    color: #9ca3af;
+}
 @media (min-width: 768px) {
     .related-scroll { 
         display: grid; 
@@ -89,6 +91,9 @@
     }
     .related-scroll > div { 
         flex: none; 
+    }
+    .demo-related-grid > a {
+        flex: none;
     }
 }
 

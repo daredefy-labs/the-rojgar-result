@@ -1,28 +1,43 @@
-# The Rojgar Result — Reusable Template and Page Generation Guide
+# The Rojgar Result — Single Project Template
 
-This file is the single source for page reuse and page generation instructions.
+This file is the one source of truth for page structure, project rules, and content generation.
 
-## Objective
+## Project summary
 
-When a blank page is requested for a category such as Answer Key, Results, Syllabus, Latest Jobs, Latest Results, Admit Cards, Upcoming Jobs, or other related pages:
+The Rojgar Result website is a static government job and exam information portal. It includes root HTML pages for:
 
-- keep the site theme unchanged
-- keep the shared header, footer and menu structure intact
-- keep the page body intentionally empty or minimal if the user requests a blank HTML shell
-- preserve the project’s layout styling and color system
-- do not create unnecessary demo pages in the site root just to hold a page structure
+- Home
+- Latest Jobs
+- Latest Results
+- Admit Cards
+- Answer Keys
+- Syllabus
+- Admission Forms
+- Sarkari Yojana
+- Upcoming Jobs
+- About Us
+- Contact Us
+- Privacy Policy
+- Terms and Conditions
+- Disclaimer
 
-## Reusable structure
+## Design theme
 
-Use the existing homepage/site layout pattern:
+- Use the same blue/red site style across all pages.
+- Keep header, navigation, footer, cards, and spacing consistent.
+- Follow the current layout language used by the site.
+- Keep metadata, Open Graph tags, canonical URL, and JSON-LD structure consistent.
 
-- common top navigation
-- category menu/list
-- shared header and footer
-- consistent CSS and JavaScript assets
-- same blue/red style and body design language
+## Rule for demo content
 
-## Required page skeleton
+- The `demo/` folder is only for reference or layout testing.
+- Do not push demo pages to the live site root.
+- Prefer generating official pages directly inside the root folder.
+- Do not create extra demo HTML files in the root when a reusable template can be used instead.
+
+## Reusable page structure
+
+Use the same structure for all root pages:
 
 ```html
 <!doctype html>
@@ -35,13 +50,11 @@ Use the existing homepage/site layout pattern:
   <meta name="keywords" content="The Rojgar Result, Sarkari Result, latest jobs">
   <link rel="canonical" href="https://therojgarresult.com/page-name.html">
 
-  <!-- Open Graph / Social Media Meta -->
   <meta property="og:title" content="Page Title - The Rojgar Result">
   <meta property="og:description" content="Page description for The Rojgar Result">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://therojgarresult.com/page-name.html">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -52,7 +65,7 @@ Use the existing homepage/site layout pattern:
   </header>
 
   <main>
-    <!-- empty body area or requested content area -->
+    <!-- page content -->
   </main>
 
   <footer>
@@ -67,15 +80,15 @@ Use the existing homepage/site layout pattern:
 ## Page generation rules
 
 1. Create one HTML page per requested page family.
-2. Reuse the same header, footer and menu structure for all page families.
-3. Keep the body blank or empty when the user asks for a blank page shell.
-4. Use the central project metadata layout and avoid changing the site design style.
-5. Use one reusable page template instead of storing numerous demo HTML files.
-6. If the user asks for latest related post pages, inspect this template and then generate pages from the same structure.
+2. Reuse the same header, footer, menu, CSS, and JS assets.
+3. Keep the body clean and consistent with the project design.
+4. Write new pages in the root project folder, not in the site root as demo files.
+5. Use the same metadata pattern for title, description, keywords, Open Graph values, and canonical links.
+6. If the user asks for related post cards, keep the structure consistent with the site and the template.
 
 ## Category mapping
 
-The site should map categories such as:
+Examples of page families:
 
 - Latest Jobs
 - Latest Results
@@ -86,18 +99,16 @@ The site should map categories such as:
 - Sarkari Yojana
 - Upcoming Jobs
 
-Each mapping should be represented in the root file family instead of creating standalone demo HTML pages.
-
 ## Content generation policy
 
-When the user asks for a new page family based on a latest post or latest vacancy concern:
+When a new page is requested:
 
-- read the instructions in this template file
-- follow the requested category structure
-- reuse code from the existing site pattern
-- write the requested HTML pages directly in the root folder
-- keep metadata titles, descriptions and canonical URLs consistent
+- follow this template
+- keep the site theme unchanged
+- reuse existing code patterns
+- generate the live page in the root folder
+- keep demo content inside the `demo/` folder only when explicitly needed for reference
 
-## Important rule
+## Final rule
 
-Do not keep demo pages in the site root when the same reusable structure can be represented by this template file and generated HTML pages.
+Use this single file as the standard and do not maintain duplicate project guidance files. The public site should remain in the root folder, while the `demo/` folder is kept only as a reference/testing area.

@@ -35,3 +35,8 @@ coverage/
 # Optional: local backups or generated static files
 *.bak
 *.orig
+
+# Ignore demo/test mock pages
+/demo/
+
+demo/
