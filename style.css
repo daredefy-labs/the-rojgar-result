@@ -11,17 +11,51 @@
 }
 ::-webkit-scrollbar-track { 
     background: #e5e7eb; 
-}
     padding: 10px; 
 }
+
 /* Dark Mode Table Borders */
 .dark .job-table th, .dark .job-table td { 
     border-color: #4b5563; 
+}
+.dark .bg-green-100.text-green-700.border-green-300 {
+    background-color: #14532d;
+    border-color: #166534;
+    color: #bbf7d0;
+}
+.dark .bg-white.text-yellow-700 {
+    background-color: #374151;
+    color: #fde68a;
 }
 
 /* ==============================================================
    5. MOBILE HORIZONTAL CAROUSEL (For Related Posts)
    ============================================================== */
+.marquee {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.marquee > span {
+    display: inline-block;
+    min-width: max-content;
+    animation: alert-marquee 22s linear infinite;
+}
+@keyframes alert-marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .marquee > span {
+        animation: none;
+        transform: none;
+    }
+}
+
 .related-scroll { 
     display: flex; 
     overflow-x: auto; 

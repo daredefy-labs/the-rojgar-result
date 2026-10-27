@@ -54,11 +54,18 @@
     <!-- Header Section -->
     <header class="bg-rrBlue dark:bg-gray-950 text-white shadow-md border-b-4 border-rrRed sticky top-0 z-50">
         <div class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-3 flex justify-between items-center relative">
-            <a href="/" class="text-2xl md:text-3xl font-extrabold tracking-wide drop-shadow-md">TheRojgarResult</a>
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold tracking-wide drop-shadow-md">TheRojgarResult</a>
 
             <div class="flex items-center gap-3">
+                <button onclick="toggleSearch()" aria-label="Search jobs" title="Search Jobs"
+                    class="p-2 rounded-full bg-blue-700 dark:bg-gray-800 text-white hover:bg-blue-600 dark:hover:bg-gray-700 transition shadow-inner focus:outline-none focus:ring-2 focus:ring-white">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
                 <button onclick="toggleDarkMode()"
-                    class="p-2 rounded-full bg-white dark:bg-gray-800 text-rrBlue dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-inner">
+                    aria-label="Toggle theme" title="Toggle Theme"
+                    class="p-2 rounded-full bg-white dark:bg-gray-800 text-rrBlue dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-inner focus:outline-none focus:ring-2 focus:ring-white">
                     <svg id="sun-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
@@ -70,6 +77,12 @@
                         </path>
                     </svg>
                 </button>
+                <div id="search-container" class="hidden absolute top-full right-4 mt-3 w-72 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-3 z-50">
+                    <input type="search" id="search-input" onkeyup="performSearch()" aria-label="Search jobs and updates"
+                        placeholder="Search Jobs, Result, Admit Card..."
+                        class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white text-sm focus:outline-none focus:border-blue-500">
+                    <ul id="search-results" class="mt-2 max-h-48 overflow-y-auto hidden"></ul>
+                </div>
             </div>
         </div>
     </header>
@@ -80,11 +93,13 @@
             class="max-w-[1400px] w-[98%] mx-auto px-2 md:px-4 py-2 flex space-x-6 overflow-x-auto whitespace-nowrap text-sm md:text-base font-bold text-gray-800 dark:text-gray-200">
             <a href="index.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">HOME</a>
             <a href="latest-jobs.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">LATEST JOBS</a>
+            <a href="sarkari-yojana.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">SARKARI YOJANA</a>
             <a href="admit-card.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">ADMIT CARD</a>
             <a href="latest-result.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">RESULT</a>
             <a href="answer-key.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">ANSWER KEY</a>
             <a href="syllabus.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">SYLLABUS</a>
             <a href="admission-form.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">ADMISSION</a>
+            <a href="upcoming-jobs.html" class="hover:text-rrRed dark:hover:text-blue-400 px-2 transition">UPCOMING JOBS</a>
         </div>
     </nav>
 
@@ -122,7 +137,7 @@
                             <path
                                 d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.686c.223-.195-.054-.31-.353-.111l-6.4 4.024-2.76-.89c-.6-.188-.61-.6.125-.89l10.836-4.18c.5-.188.95.11.832.89z" />
                         </svg>
-                        <strong>Social:</strong> &nbsp; <a href="https://t.me/ishitasahuu" target="_blank"
+                        <strong>Social:</strong> &nbsp; <a href="https://t.me/ishitasahuu" target="_blank" rel="noopener noreferrer"
                             class="text-blue-600 dark:text-blue-400 hover:underline">Join our Telegram Group</a>
                     </p>
                 </div>
@@ -132,23 +147,23 @@
             <div
                 class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-inner border border-gray-200 dark:border-gray-600">
                 <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Send Us a Message</h2>
-                <form action="#" method="POST" class="space-y-4">
+                <form action="mailto:therojgarresult@gmail.com" method="post" enctype="text/plain" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-bold mb-1 text-gray-700 dark:text-gray-300">Full Name</label>
-                        <input type="text"
+                        <label for="contact-name" class="block text-sm font-bold mb-1 text-gray-700 dark:text-gray-300">Full Name</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" required
                             class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-rrBlue"
                             placeholder="Enter your name">
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-1 text-gray-700 dark:text-gray-300">Email
+                        <label for="contact-email" class="block text-sm font-bold mb-1 text-gray-700 dark:text-gray-300">Email
                             Address</label>
-                        <input type="email"
+                        <input id="contact-email" name="email" type="email" autocomplete="email" required
                             class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-rrBlue"
                             placeholder="Enter your email">
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-1 text-gray-700 dark:text-gray-300">Message</label>
-                        <textarea rows="4"
+                        <label for="contact-message" class="block text-sm font-bold mb-1 text-gray-700 dark:text-gray-300">Message</label>
+                        <textarea id="contact-message" name="message" rows="4" required
                             class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:border-rrBlue"
                             placeholder="How can we help you?"></textarea>
                     </div>
