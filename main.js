@@ -56,8 +56,8 @@ const searchDatabase = [
     { title: "Disclaimer", link: "disclaimer.html" },
     { title: "404 Page", link: "404.html" },
     { title: "Coming Soon", link: "coming-soon.html" },
-    { title: "RRB Railway Technician Syllabus 2026", link: "rrb-railway-technician-syllabus-2026.html" },
-    { title: "SSC CGL Syllabus 2026", link: "ssc-cgl-syllabus-2026.html" }
+    { title: "RRB Railway Technician Syllabus 2026", link: "coming-soon.html" },
+    { title: "SSC CGL Syllabus 2026", link: "coming-soon.html" }
 ];
 
 function toggleSearch() {
